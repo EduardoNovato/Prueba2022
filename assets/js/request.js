@@ -37,7 +37,7 @@ class ApiRequest {
   /**
    * Método que hace peticiones al backend de GCEquipos
    * @private
-   * @param {'POST'|'GET'} action Método que recibe el servicio {POST | GET}
+   * @param {'POST'|'GET'|'PUT'} action Método que recibe el servicio {POST | GET | PUT}
    * @param {string} controller Nombre del controlador del api sin la palabra clave Controller (Puede ser escrito en PascalCase o kebab-case)
    * @param {string} method Nombre del método del controlador del api a ejecutar (Puede ser escrito en PascalCase o kebab-case)
    * @param {Record<string, any> | string} parameters Paramétros

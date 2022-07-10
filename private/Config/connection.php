@@ -14,7 +14,7 @@ class Connection
     public function __construct()
     {
         try {
-            $connection = (object) ["dsn" => "mysql:dbname=gc_equipos;host=localhost", "user" => "root", "password" => ""];
+            $connection = (object) ["dsn" => "mysql:dbname=gc_equipos;host=localhost", "user" => "root", "password" => "123456"];
             $this->DB = new PDO($connection->dsn, $connection->user, $connection->password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
         } catch (\Throwable $th) {
             throw new Exception("Falla la conexión a BD: " . $th->getMessage(), 1);

@@ -1,0 +1,17 @@
+.inactive-computer{
+    background-color: #FF4269;
+
+    color: white;
+}
+
+.edit-button{
+    border-radius: 100%;
+    border: 1px solid #29628D !important;
+    color: #29628D !important;
+}
+
+.delete-button{
+    border-radius: 100%;
+    border: 1px solid #FF4269 !important;
+    color: #FF4269 !important;
+}

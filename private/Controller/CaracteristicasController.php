@@ -48,4 +48,32 @@ class CaracteristicasController
         echo json_encode($response);
     }
 
+    public function updateComputer(){
+        $this->model->gce_id = isset($_POST['gce_id']) ? $_POST['gce_id'] : null;
+        $this->model->gce_nombre_equipo = isset($_POST['gce_nombre_equipo']) ? $_POST['gce_nombre_equipo'] : null;
+        $this->model->gce_procesador = isset($_POST['gce_procesador']) ? $_POST['gce_procesador'] : null;
+        $this->model->gce_ram = isset($_POST['gce_ram']) ? $_POST['gce_ram'] : null;
+        $this->model->gce_disco_duro = isset($_POST['gce_disco_duro']) ? $_POST['gce_disco_duro'] : null;
+        $this->model->gce_grafica = isset($_POST['gce_grafica']) ? $_POST['gce_grafica'] : null;
+        $this->model->gce_pantalla = isset($_POST['gce_pantalla']) ? $_POST['gce_pantalla'] : null;
+        $this->model->gce_teclado = isset($_POST['gce_teclado']) ? $_POST['gce_teclado'] : null;
+        $this->model->gce_estado = isset($_POST['gce_estado']) ? $_POST['gce_estado'] : null;
+        $this->model->gce_board = isset($_POST['gce_board']) ? $_POST['gce_board'] : "gce_board";
+        $this->model->gce_mouse = isset($_POST['gce_mouse']) ? $_POST['gce_mouse'] : null;
+        $this->model->gce_case = isset($_POST['gce_case']) ? $_POST['gce_case'] : null;
+        
+        $response = $this->model->update();
+        echo json_encode($response);
+    }
+
+    public function deleteComputer(){
+        $response = $this->model->delete($_POST["id"]);
+        echo json_encode($response);
+    }
+    
+    public function updateStatus(){
+        $response = $this->model->updateStatus($_POST["id"], $_POST["status"]);
+        echo json_encode($response);
+    }
+
 }
